@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link href="https://css.gg/link.css" rel="stylesheet" />
+
+    <style>
+      .first {
+        height: 500px;
+        width: 100%;
+        background: url("2.png");
+        background-size: cover;
+        font-family: "Montserrat", sans-serif;
+      }
+      .second {
+        height: 490px;
+        width: 100%;
+      }
+      .second div {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 20px;
+        margin-left: 20px;
+        height: 300px;
+        width: 900px;
+        background-color: gray;
+        float: left;
+        z-index: -1;
+      }
+
+      #yr1,
+      #yr2 {
+        font-family: "Montserrat", sans-serif;
+        margin-top: 20px;
+        width: 200px;
+        background: white;
+        color: gray;
+        border: none;
+        font-size: 20px;
+      }
+      #yr1 {
+        float: left;
+        margin-left: 200px;
+      }
+      #yr2 {
+        float: right;
+        margin-right: 200px;
+      }
+
+      #yr1:hover,
+      #yr2:hover {
+        background: lightgray;
+      }
+
+      #txt {
+        margin: 10px;
+        font-family: "Montserrat", sans-serif;
+        visibility: hidden;
+        font-size: 20px;
+        color: white;
+      }
+
+      .foot {
+        margin-top: 80px;
+        position: absolute;
+        background: black;
+        width: 100%;
+        color: white;
+        height: 100px;
+        padding: 30px;
+      }
+    </style>
+    <title>Virtual MBA | SCIT</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg"
+      style="height: 150px; background: white;"
+    >
+      <a href="#"
+        ><img
+          src="1.jpg"
+          height="100px"
+          class="d-inline-block align-top"
+          alt=""
+          loading="lazy"
+          style="border-radius: 50%;"
+      /></a>
+      <span
+        style="
+          font-family: 'Montserrat', sans-serif;
+          font-size: 50px;
+          line-height: 80px;
+          margin-left: 20px;
+          color: red;
+          letter-spacing: 2px;
+        "
+        >SCIT
+      </span>
+      <span
+        style="
+          font-family: 'Montserrat', sans-serif;
+          font-size: 50px;
+          line-height: 80px;
+          margin-left: 20px;
+          color: #049bdc;
+          letter-spacing: 2px;
+        "
+        >VIRTUAL MBA</span
+      >
+    </nav>
+    <div class="first">
+      <div style="width: 50%;">
+        <h1
+          style="
+            text-align: center;
+            color: white;
+            font-size: 45px;
+            padding-top: 20px;
+          "
+        >
+          ABOUT VIRTUAL MBA
+        </h1>
+        <p style="font-size: 25px; margin-left: 20px; color: black;">
+          While online education can no longer be said to be in its infancy, the
+          idea of high-quality online provision at MBA level is still certainly
+          a new one. Offering a high-quality MBA online is a challenging thing
+          for business schools, requiring a huge commitment from faculty,
+          management and administrators, and considerable investment in the
+          technologies that makes delivering a high-quality online degree
+          possible.
+        </p>
+      </div>
+    </div>
+
+    <div class="second">
+      <div>
+        <h1 style="text-align: center; margin-top: 10px;">PROGRAM DETAILS</h1>
+        <button
+          type="button"
+          id="yr1"
+          class="btn btn-outline-primary"
+          onclick="check1()"
+        >
+          YEAR I
+        </button>
+        <button
+          type="button"
+          id="yr2"
+          class="btn btn-outline-primary"
+          onclick="check2()"
+        >
+          YEAR II
+        </button>
+        <div style="height: 100px;">
+          <p id="txt"></p>
+        </div>
+        <script>
+          function check1() {
+            if (document.getElementById("txt").style.visibility == "visible") {
+              document.getElementById("txt").innerHTML = "";
+              document.getElementById("txt").style.visibility = "hidden";
+            } else {
+              document.getElementById("txt").innerHTML = "Year 1 Structure.";
+              document.getElementById("txt").style.visibility = "visible";
+            }
+          }
+
+          function check2() {
+            if (document.getElementById("txt").style.visibility == "visible") {
+              document.getElementById("txt").innerHTML = "";
+              document.getElementById("txt").style.visibility = "hidden";
+            } else {
+              document.getElementById("txt").innerHTML = "Year 2 Structure.";
+              document.getElementById("txt").style.visibility = "visible";
+            }
+          }
+        </script>
+      </div>
+      <img
+        src="3.jpg"
+        style="
+          width: 650px;
+          float: right;
+          margin-top: -200px;
+          margin-right: 20px;
+        "
+      />
+    </div>
+
+    <div class="foot">
+      <a href="#" style="color: white;"><i class="gg-link"></i></a>
+    </div>
+  </body>
+</html>
